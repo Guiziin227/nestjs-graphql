@@ -4,8 +4,26 @@ import { Injectable } from '@nestjs/common';
 export class AuthorService {
   constructor() {}
 
-  findOneById(id: number): string {
-    return `Author with ID: ${id}`;
+  findOneById(id: number) {
+    const author1 = {
+      id: 1,
+      firstName: 'Jane',
+      lastName: 'Austen',
+    };
+
+    if (id === 1) {
+      return author1;
+    }
+
+    const author2 = {
+      id: 2,
+      firstName: 'Mark',
+      lastName: 'Twain',
+    };
+
+    if (id === 2) {
+      return author2;
+    }
   }
 
   findAll(): string[] {

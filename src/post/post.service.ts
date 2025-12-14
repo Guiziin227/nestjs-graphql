@@ -13,6 +13,9 @@ export class PostService {
   }
 
   findPostsByAuthorId(id: number) {
-    return [`Posts by Author ${id}`];
+    return [
+      { id: id, title: 'Post A' },
+      { id: id, title: 'Post B' },
+    ];
   }
 }
