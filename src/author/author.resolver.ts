@@ -11,7 +11,7 @@ import { PostService } from 'src/post/post.service';
 import { Author } from './models/author.model';
 import { Post } from 'src/post/models/post.model';
 
-@Resolver()
+@Resolver(() => Author)
 export class AuthorResolver {
   constructor(
     private readonly authorService: AuthorService,
